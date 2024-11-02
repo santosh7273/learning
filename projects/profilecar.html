@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin:0;
+            padding:10px;
+        }
+        body,html{
+            overflow-x:hidden;
+            
+        }
+        .profile_card{
+            width:50%;
+            margin:auto;
+            justify-content: center;
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+            border-style: solid;
+            padding:10px;
+            
+        }
+        .db img{
+            width:100%;
+            height:auto;
+            border-radius: 50%;
+        }
+        .db{
+            border-style:solid;
+            padding:10px;
+            flex:1;
+        }
+        .mc{
+            border-style:solid;
+            border-color: red;
+            padding: 10px;
+            flex:2;
+        }
+        .sl{
+            width:100%;
+            margin:auto;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            border-style: solid;
+        }
+        .sl a{
+            border-style: dashed;
+            margin:5px;
+            font-size:25px;
+        }
+        button{
+            margin-top:10px;
+            flex:1;
+            font-size:15px;
+            background-color: none;
+            border: none;
+            padding:3px;
+            background-color:rgb(226, 52, 52);
+            color:white;
+            border-radius: 3px;
+        }
+        .ski{
+            border-style: solid;
+            margin-top:10px;
+            display: flex;
+            align-items: center;
+            flex-wrap:wrap;
+            width:90%;
+        }
+        .ski a{
+            padding:3px;
+            border-radius:5px;
+            margin:5px;
+            text-decoration: none;
+            color:rgba(255, 255, 255, 0.822);
+            background-color: rgb(255, 72, 0);
+        }
+        @media screen and (max-width:700px){
+            .profile_card{
+                flex-direction: column;
+                width:90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile_card">
+        <div class="db">
+            <img src="https://cdn.pixabay.com/photo/2023/01/28/20/23/ai-generated-7751688_960_720.jpg" alt="" class="pf">
+            <h1>Web Developer</h1>
+            <p>As a Software developer in masytech technologies</p>
+        </div>
+        <div class="mc">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis sequi totam, excepturi quod, veritatis porro maiores doloremque nesciunt dolore saepe numquam minus tempore! Beatae obcaecati provident deleniti harum ex! Quas?</p>
+            <p>This is the minimization f the conrer topppers</p>
+            <div class="sl">
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+            <div class="ski">
+                <a href="" class="ski1">Nodejs</a>
+                <a href="" class="ski1">Reactjs</a>
+                <a href="" class="ski1">mongodb</a>
+                <a href="" class="ski1">Competiive coding</a>
+                <a href="" class="ski1">Github</a>
+            </div>
+            <button class="btn">View ful profile</button>
+        </div>
+    </div>
+</body>
+</html>

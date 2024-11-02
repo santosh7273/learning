@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w2{
+            background-color: red;
+            height:30vh;
+        }
+        @media screen and (max-width:700px){
+            .w2{
+                background-color:blue;
+            }
+        }
+        @media screen and (orientation:portrait){
+            .w2{
+                background-color: orange;
+            }
+        }
+        @media screen and (orientation:landscape){
+            .w2{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="w2"></header>
+</body>
+</html>

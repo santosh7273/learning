@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            overflow-x:hidden;
+        }
+        *{
+            margin: 0;
+            padding:0;
+        }
+        header{
+            position: fixed;
+            z-index: 1;
+            background-color:white;
+            width:100%;
+            border-radius: 5px;
+            box-shadow: 0px 10px 10px black;
+        }
+        nav{
+            padding:10px;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+        }
+        body{
+            color:black;
+        }
+        
+        nav h1{
+            font-size:25px;
+            font-weight:bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:rgb(17, 128, 161)
+        }
+        nav ul{
+            list-style-type: none;
+            display: flex;
+        }
+        nav ul li{
+            margin: 10px;
+        }
+        nav ul li a{
+            text-decoration: none;;
+            color:black;
+            font-weight:bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:darkgoldenrod
+        }
+        .m1{
+            background-image: url('https://cdn.pixabay.com/photo/2020/04/12/18/13/background-5035258_1280.jpg');
+            height:100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .m2{
+            padding:5px;
+            line-height: 2;
+            margin-top:50px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .m2 h1{
+        }
+        .m2 p{
+            margin-bottom: 10px;
+            font-weight:bold;
+            opacity:0.9;
+        }
+        .m2 a{
+            text-decoration: none;
+            color:white;
+            padding:5px;
+            background-color: brown;
+            border-radius:10px;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .about{
+            width:100%;
+            
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding:5px;
+            margin-top: 10vh;
+           }
+        .mc{
+            box-shadow: 0px 0px 10px green;
+            width:80%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            padding:20px;
+            align-items: center;
+            height:auto;
+            transition:transform 0.6s ease-in-out;
+        }
+        .mc:hover{
+            transform: Scale(1.1);
+        }
+        .mc1{
+            margin:10px;
+            flex:1;
+            
+        }
+        .mc1 h1{
+            margin-bottom: 5px;
+            font: size 25px;
+            font-weight:bold;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        .mc1 p{
+            font-size:15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .mc2{
+            flex:1;
+            margin: auto;  
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .mc2 img{
+            width:80%;
+            border-radius: 20px;
+        }
+        .pr{
+            height:auto;
+            background:linear-gradient(to right,rgb(118, 221, 118),rgb(103, 203, 221));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height:2;
+        }
+        .pr h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:black;
+            font-size: 25px;
+        }
+        .pr p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight:normal;
+            font-size:15px;
+            margin-bottom: 10px;;
+        }
+        .pr a{
+            text-decoration: none;
+            color:white;
+            border-style:none;
+            background-color: red;
+            padding:5px;
+            border-radius: 5px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .min{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:90%;
+            margin:auto;
+        }
+        .min1{
+            margin:10px;
+            flex:1;
+        }
+        .min2{
+            flex:1;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .min2 img{
+            border-radius: 10px;;
+            width:100%;
+        }
+        .contact{
+            justify-content: center;
+            align-items: center;
+            width:50%;
+            margin:auto;
+            margin-bottom: 20px;
+        }
+        .contact h1{
+            text-align: center;
+            color:blue;
+            font-family: Arial, Helvetica, sans-serif;
+            padding:20px;
+        }
+        .contact .he{
+            margin-bottom: 10px;
+        }
+        .ff{
+            width:100%;
+            margin: auto;
+            padding:20px;
+            border: solid;
+        }
+        .m5 label{
+            font-size:15px;
+            font-weight: 600;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .m5{
+            margin-bottom: 15px;
+        }
+        input,textarea{
+            width:100%;
+            height:40px;
+        }
+        .m6{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .m6 button{
+            width:80%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 5px;
+            background: none;
+            background-color: red;
+            border-radius: 5px;
+            border-color: none;
+            border-style: none;
+            color:white;
+        }
+        .om22{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:90%;
+            margin:auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .pa1,.pa2,.pa3{
+            margin:10px;
+        }
+        .oc{
+            width:100%;
+            justify-content: center;
+        }
+       .om22 img{
+        width:100%;
+       }
+       .om11 img{
+        width:100%;
+       }
+        .om11{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:90%;
+            margin:auto;
+        }
+        .pa1{
+            flex:1;
+            border-color:red;
+            border-style:solid;
+        }
+        .pa2{
+            border-color:red;
+            border-style:solid;
+            flex:1
+        }
+        .pa3{
+            
+            border-color:red;
+            border-style:solid;
+            flex:1
+        }
+        .oc{
+            width:100%;
+            display: flex;
+            justify-content: start;
+        }
+        .oc a{
+            margin:2px;
+            text-decoration: none;
+            color:black;
+            padding:6px;
+            background-color:burlywood;
+        }
+        @media screen and (max-width:780px){
+            .min{
+                flex-direction: column;
+                width:95%;
+            }
+            .om11{
+                flex-direction: column;
+            }
+            .om22{
+                flex-direction: column;
+            }
+            .mc{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="heading1">
+            <h1>Sk Travels</h1>
+        </div>
+        <div class="headings2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+    <section class="m1">
+        <div class="m2">
+            <h1>Innovating for tommorrow</h1>
+            <p>This is the best one to describe the cuurent abravation</p>
+            <a href="#">Get Started</a>
+        </div>
+    </section>
+    <section class="om1">
+        <div class="om11">
+            <div class="pa1">
+                <img src="https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_640.jpg">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, est? Debitis officiis, dolore quisquam harum ipsam exercitationem nemo vol</p>
+                <div class="oc">
+                    <a href="#">About</a>
+                    <a href="#">conatct</a>
+                    <a href="#">pip</a>
+                </div>
+            </div>
+            <div class="pa2">
+                <img src="https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_640.jpg">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, est? Debitis officiis, dolore quisquam harum ipsam exercitationem nemo vol</p>
+                <div class="oc">
+                    <a href="#">About</a>
+                    <a href="#">conatct</a>
+                    <a href="#">pip</a>
+                </div>
+            </div>
+            <div class="pa3">
+                <img src="https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_640.jpg">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, est? Debitis officiis, dolore quisquam harum ipsam exercitationem nemo vol</p>
+                <div class="oc">
+                    <a href="#">About</a>
+                    <a href="#">conatct</a>
+                    <a href="#">pip</a>
+                </div>
+            </div>
+        </div>
+        <div class="om22">
+            <div class="pa1">
+                <img src="https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_640.jpg">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, est? Debitis officiis, dolore quisquam harum ipsam exercitationem nemo vol</p>
+                <div class="oc">
+                    <a href="#">About</a>
+                    <a href="#">conatct</a>
+                    <a href="#">pip</a>
+                </div>
+            </div>
+            <div class="pa2">
+                <img src="https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_640.jpg">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, est? Debitis officiis, dolore quisquam harum ipsam exercitationem nemo vol</p>
+                <div class="oc">
+                    <a href="#">About</a>
+                    <a href="#">conatct</a>
+                    <a href="#">pip</a>
+                </div>
+            </div>
+            <div class="pa3">
+                <img src="https://cdn.pixabay.com/photo/2024/10/17/16/14/waterfall-9128051_640.jpg">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, est? Debitis officiis, dolore quisquam harum ipsam exercitationem nemo vol</p>
+                <div class="oc">
+                    <a href="#">About</a>
+                    <a href="#">conatct</a>
+                    <a href="#">pip</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="mc">
+            <div class="mc2">
+                <img src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg">
+            </div>
+            <div class="mc1">
+                <h1>Sk Travels</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit nostrum saepe doloremque atque nam ipsam corrupti adipisci quidem earum sit, tempore, maiores incidunt recusandae? Dolorum in ducimus quisquam distinctio facere?
+                asperiores iusto esse iure reprehenderit sint maiores ipsam accusamus dicta! Quis magni iure voluptatum temporibus qui est consequuntur.</p>
+            </div>
+        </div>
+    </section>
+    <section class="pr">
+        <div class="prr">
+            <h1>Ready to overcome the planet</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#">Redeem now</a>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="he">
+            <h1>Get in Touch</h1>
+        </div>
+        <div class="ff">
+            <form>
+                <div class="m5">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="m5">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="m5">
+                    <label for="desc">Message</label>
+                    <textarea name="" id="desc"></textarea>
+                </div>
+                <div class="m6">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    border:0;
+}
+#weight{
+    color:red;
+}
+.pl{
+    color:blue;
+}
+.cl{
+    color:black;
+    background-color:pink;
+}
