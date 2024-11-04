@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">Name</label>
+        <input type="text" name="fname" id="fname">
+        <label for="cg">e</label>
+        <input type="radio" name="cg" id="cg" value="sdfjas">sakd
+        <input type="radio" name="cg" id="cg" value="dsf">asjkd
+    </form>
+    <button onclick="ip()">ds</button>
+    <script>
+        function ip(){
+        const c1=document.getElementsByName('cg');
+        for(let i=0;i<c1.length;i++){
+            if(c1[i].checked){
+                console.log(c1[i].value)
+            }
+        }
+    }
+    </script>
+</body>
+</html>

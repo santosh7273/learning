@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Strings</h1>
+    <script>
+        let a="ji"
+        console.log(a)
+        a="io"
+        console.log(a)
+        let b='djis'
+        console.log(b)
+        console.log(`this is ${b} empire`)
+        console.log(`this is ${10*3} ruppees`)
+        console.log("line1\nLine2\t Tabbed")
+        let s="hi"
+        let p="sk"
+        console.log(s+" "+p)
+        console.log(s,p)
+        console.log(`${s}      ${p}`)
+        let str="iuUlP"
+        console.log(str.toLowerCase())
+        str=str.toUpperCase()
+        console.log(str)
+        console.log(str.length)
+        let str1="hello this is sk"
+        console.log(str1.slice(3,8))
+        console.log(str1[0])
+        let p1="hi hello";
+        console.log(p1.split(""))
+        console.log(p1.split(' '))
+        console.log(p1.indexOf('hell'))
+        console.log(p1.indexOf('hell',5))
+        //trim method one of the most impotant method
+        let s1="  ktsantosh5@gmail.com  "
+        s1=s1.trim()
+        console.log(s1)
+        let s2="\n\thello world "
+        console.log(s2.trim())
+        let abc="hello santosh"
+        abc=abc.replace("santosh","kumar")
+        console.log(abc)
+        let xy="hello sk hello kumar"
+        console.log(xy.lastIndexOf("hello"))
+        //includes one of the most important one
+        let xyz="hello world"
+        result=xyz.includes("world")
+        console.log(result)
+        let o1=21
+        console.log(typeof String(o1))
+        //tostring method
+        let x1=234
+        console.log(typeof x1.toString())
+        let x2=[1,2,3]
+        console.log(typeof String(x2))
+        let x3="123"
+        console.log(Number(x3),x3)
+        let x4="23.4"
+        console.log(parseFloat(x4))
+        let p44="87px"
+        console.log(parseInt(p44))
+        console.log(Boolean("sample"))
+        console.log(Boolean(""))
+        let og=2
+        console.log(og**4)
+        let bd="1011"
+        console.log(parseInt(bd,2))
+        let of1="23.5degc"
+        console.log(parseFloat(of1.replace("degc","")))
+        console.log(parseInt(of1.replace("degc","")))
+        console.log(isNaN(parseFloat(23.5)))
+        console.log(isNaN(parseFloat("23.5")))
+    </script>
+    </body>
+    </html>

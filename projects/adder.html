@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mm{
+        width:70%;
+        margin:auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div class="mm">
+        <div class="mm1">
+    <form>
+        <div class="sec">
+            <label for="fnum">Enter First Number</label>
+            <input type="number" id="fnum" value ="9" class="fnum">
+        </div>
+        <div class="sec">
+            <label for="snum">Enter Second Number</label>
+            <input type="number" id="snum" value="1" class="snum">
+        </div>
+        <button type="button" id="ui">Submit</button>
+    </form>
+    <h1 id="hh">Result is</h1>
+    </div>
+    </div>
+    <script>
+        let c1=document.getElementById("ui")
+        c1.addEventListener('click',()=>{
+            let c2=document.getElementById("fnum").value
+            let c3=document.getElementById("snum").value
+            let p1=parseFloat(c2)+parseFloat(c3)
+            let c4=document.getElementById("hh")
+            c4.innerHTML=p1;
+        })
+    </script>
+</body>
+</html>

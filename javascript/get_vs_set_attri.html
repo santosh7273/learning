@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" gg="mi">
+        <p>Hello</p>
+        <h2>ji</h2>
+    </div>
+    <script>
+        const c1=document.getElementById("main");
+        const c2=c1.getAttribute("gg");
+        c1.setAttribute("gg","miii")
+        console.log(c2)
+        console.log(c1.getAttribute("gg"))
+    </script>
+</body>
+</html>
