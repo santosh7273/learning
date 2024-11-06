@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays in Objects</h1>
+    <script>
+        //todolist application
+        let todolist={
+            title:'todolistapplication',
+            'tasks':[
+            {'id':1,'desciption':"this is markes","status":"False"},
+            {'id':2,'desciption':"this is zoos","status":"False"}
+            ]
+        }
+        console.log(todolist)
+        console.log(todolist.tasks)
+        let addnewtask=(desc,id)=>{
+            let o1=todolist.tasks
+            let o2={'id':id,"description":desc,"status":"False"}
+            o1.push(o2)
+        }
+        addnewtask("this is cinema",3)
+        console.log(todolist)
+        const completetask=(id)=>{
+            let o9=todolist.tasks
+            let e1=o9.find((num)=>{
+                return num.id==id
+            })
+            if(e1){
+                e1.status="True"
+            }
+            else{
+                console.log("Task not found")
+            }
+        }
+        completetask(3)
+        let k1=[
+        {'name':'sk',"id":21},
+        {'name':'sk1',"id":22}
+        ]
+        k1.forEach((num)=>{
+            console.log(num.id)
+        })
+        let i1=[
+        {'id':21},
+        {"id":22}
+        ]
+        let i2=i1.filter((num)=>{
+            return num.id%7==0
+        })
+        console.log(i2)
+    </script>
+</body>
+</html>

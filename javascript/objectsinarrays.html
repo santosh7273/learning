@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>objects in arrays</h1>
+    <script>
+        let a1=[
+        {'name':'santosh','rollno':'M5','marks':21},
+        {'name':'kumar','rollno':'1','marks':25}
+        ]
+        for(let i=0;i<a1.length;i++){
+            console.log(a1[i].marks)
+        }
+        //updating the marks if rollno is"M5"
+        const upd=(mo)=>{
+            const p=a1.find((num)=>{
+                return num.rollno==mo
+            })
+            if(p){
+                p.marks=32
+            }
+            else{
+                console.log('Rollno not found')
+            }
+        }
+        upd("M5")
+        console.log(a1)
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>musicplaylist</h1>
+    <script>
+        let playlist=[
+        {
+            id:1,
+            'title':'Svp',
+            'artist':'thaman'
+        },
+        {
+            id:2,
+            'title':'vd',
+            'artist':'ani'
+        },
+        {
+            
+            id:3,
+            'title':'vd2',
+            'artist':'anirudh'
+        }
+        ]
+        const removesong=(id)=>{
+            let r1=playlist.findIndex((r11)=>{
+                return r11.id==id
+            })
+            if(r1!=-1){
+                playlist.splice(r1)
+            }
+            else{
+                console.log("song not found")
+            }
+        }
+        removesong(3)
+       removesong(5)
+       console.log(playlist)
+       
+    </script>
+</body>
+</html>

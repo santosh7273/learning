@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>trail</h1>
+    <script>
+        let a1=[1,2,3,4]
+        let a2=a1.map((num)=>{
+            return num*2
+        })
+        console.log(a2)
+        let a3=a2.filter((num)=>{
+            return num%3==0
+        })
+        console.log(a3)
+        let o1={
+            'fruit':'apple',
+            'quantity':[3,4,5],
+            'cityno':3
+        }
+        console.log(o1)
+        console.log(o1.fruit)
+        console.log(o1.quantity)
+        console.log(o1.cityno)
+        let sum=a2.reduce((acc,num)=>{
+            acc=acc+num
+            return acc
+        })
+        console.log(sum)
+    </script>
+</body>
+</html>
