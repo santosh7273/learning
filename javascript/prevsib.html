@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="io1">Hellow this si1</p>
+    <button id="io2">Submit1</button>
+    <p id="io3">Hellow this si2</p>
+    <button id="io4">Submit1</button>
+    <script>
+        let o1=document.getElementById('io2')
+        let o2=document.getElementById('io4')
+        let w1=o1.previousSibling
+        if(w1.nodeType==3){
+            w1.textContent='thisii   sijsi'
+        }
+        console.log(w1)
+    </script>
+</body>
+</html>

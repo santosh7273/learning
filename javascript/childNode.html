@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Parent Node</h1>
+    <div id="p1">
+        <div id="p2">
+            <div id="p3">
+                <li id="oi">hello</li>
+                <li>Sk</li>
+            </div>
+        </div>
+    </div>
+    <script>
+        let a1=document.getElementById('p1')
+        let a2=a1.childNodes[1]
+        let a3=a1.childNodes[0]
+        console.log(a3)
+    </script>
+</body>
+</html>

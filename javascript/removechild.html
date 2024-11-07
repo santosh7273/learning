@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="io">
+
+    </div>
+    <script>
+        function insf(name){
+        let a1=document.getElementById('io')
+        let p1=document.createElement('h2')
+        p1.textContent=name
+        p1.style.color='red'
+        a1.appendChild(p1)
+        }
+        insf('apple1')
+        insf('apple2')
+        function fremove(name){
+            let a4=document.getElementById('io')
+            for(li of a4.children){
+                if(li.textContent==name){
+                    a4.removeChild(li)
+                    
+                }
+            }
+
+        }
+        fremove('apple1')
+        
+    </script>
+</body>
+</html>
