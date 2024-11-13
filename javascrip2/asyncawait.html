@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function fun1(name){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+              resolve(name)
+                },3000)
+            })
+        }
+        async function fun2(){
+            let result=await fun1('sk')
+            console.log(result)
+        }
+        fun2()
+        //fetching data from api
+        async function getName(){
+            return new Promise((resolve,reject)=>{
+                resolve('sk1')
+            })
+        }
+        async function getAge(){
+            return new Promise((resolve,reject)=>{
+                resolve('21')
+            })
+        }
+        async function sample(){
+            let res=await Promise.all([getName(),getAge()])
+            console.log(res[0],res[1])
+        }
+        sample()
+    </script>
+</body>
+</html>

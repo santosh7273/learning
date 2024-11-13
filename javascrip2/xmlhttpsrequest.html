@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let xh=new XMLHttpRequest()
+        xh.open('GET','https://jsonplaceholder.typicode.com/posts',true)
+        xh.onreadystatechange=function(){
+            if(xh.readyState==4 && xh.status==200){
+                console.log(xh.responseText)
+                console.log(JSON.parse(xh.responseText))
+            }
+            else{
+                console.log(xh.statusText)
+            }
+        }
+        xh.send()
+    </script>
+</body>
+</html>

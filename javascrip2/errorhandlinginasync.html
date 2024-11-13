@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function fun1(data){
+            return new Promise((resolve,reject)=>{
+                if(data==21){
+                    resolve('success')
+                }
+                else{
+                    reject('failed')
+                }
+            })
+        }
+        async function sample(){
+            try{
+                let r1=await fun1(21)
+                console.log(r1)
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+        sample()
+    </script>
+</body>
+</html>

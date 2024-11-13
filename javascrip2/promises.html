@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Promise1(success,cb){
+            console.log('call back callled')
+            if(success){
+                cb(null,'successfull')
+            }
+            else{
+                cb("operation failed",null)
+            }
+        }
+        Promise1(false,(err,data)=>{
+            if(err){
+                console.log(err)
+            }
+            else{
+                console.log(data)
+            }
+            console.log('hiii')
+        })
+        //example for even odd chacking
+        function eoc(num,cb1){
+            if(num%2==0){
+                cb1(null,'it is even')
+            }
+            else{
+                cb1('it is not even',null)
+            }
+        }
+        eoc(26,(err,result)=>{
+            if(err){
+                console.log(err)
+            }
+            else{
+                console.log(result)
+            }
+            console.log('irresp')
+        })
+        //same code using prmises
+        function eod(number){
+            return new Promise((resolve,reject)=>{
+                if(number%2==0){
+                    resolve('it is even')
+                }
+                else{
+                    reject('it is not even')
+                }
+            })
+        }
+        eod(32).then((result)=>{
+            console.log(result)
+        }).catch((error)=>{
+            console.log(error)
+        }).finally(()=>{
+            console.log('res')
+        })
+    </script>
+</body>
+</html>

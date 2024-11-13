@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:red;
+            padding:10px;
+            border-color: black;
+            border-style: solid;
+        }
+        #main2{
+            display: none;
+        }
+        .re1.active{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="ip1" class="re1">
+            <p id="o1">Hello world</p>
+        </div>
+        <div id="ip2" class="re1">
+            <p id="o2">sk</p>
+        </div>
+    </div>
+    <div id="main1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat quis sequi possimus eaque commodi, quod esse tempore iste quo deserunt itaque dolorum, reprehenderit quae sunt nemo eum, inventore consequatur.</p>
+    </div>
+    <div id="main2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A animi quibusdam magni nulla quae nesciunt, eum debitis adipisci officia quo veritatis, distinctio odit. Error eveniet molestiae repellendus laboriosam explicabo et.
+        Maxime sunt odio enim esse unde sequi, tenetur sapiente quis vero iusto autem, fugiat quibusdam voluptatum est nesciunt cupiditate, nobis veritatis officia ratione quisquam! Qui in animi illo obcaecati cupiditate!
+        Maiores perferendis libero nisi ut eius, placeat suscipit quisquam autem sunt eligendi! Provident dolorum mollitia laudantium? Id iure sequi, odio assumenda temporibus perspiciatis iste ullam laudantium excepturi ipsa atque numquam!
+        Voluptate expedita atque officiis soluta eveniet voluptatem vero, incidunt sequi ducimus aperiam distinctio, maxime illum nostrum autem numquam id? Expedita voluptate rem dolorem, illo harum sed id quidem eum laudantium!</p>
+    </div>
+    <script>
+        let we1=document.getElementById('o1')
+        let we4=document.getElementById('o2')
+        we1.addEventListener('click',()=>{
+            let we2=document.getElementById('main2')
+            we2.style.display="none"
+            let we3=document.getElementById('main1')
+            we3.style.display="block"
+            we1.classList.add('re1')
+            we4.classList.remove('re1')
+        })
+        we4.addEventListener('click',()=>{
+            let we2=document.getElementById('main2')
+            we2.style.display="block"
+            let we3=document.getElementById('main1')
+            we3.style.display="none"
+            we4.classList.add('re1')
+            we1.classList.remove('re1')
+        })
+    </script>
+</body>
+</html>

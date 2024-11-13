@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Callback functions</h1>
+    <script>
+        let a1=()=>{
+            console.log('call')
+        }
+        function lp(fun){
+            fun()
+        }
+        lp(a1)
+        let a2=()=>{
+            return 'h111'
+        }
+        p2(a2)
+        function p2(fun){
+            console.log(fun())
+        }
+    </script>
+</body>
+</html>

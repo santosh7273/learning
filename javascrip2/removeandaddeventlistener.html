@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b1">Add event</button>
+    <button id="b2">Remove evemnt</button>
+    <script>
+        let f1=()=>{
+            console.log('add')
+        }
+        let o1=document.getElementById('b1')
+        o1.addEventListener('click',f1)
+        let o2=document.getElementById('b2')
+        o2.addEventListener('click',()=>{
+            o1.removeEventListener('click',f1)
+        })
+    </script>
+</body>
+</html>

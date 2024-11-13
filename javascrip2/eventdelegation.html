@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="o1">
+        <li id="io1" in="1">Hello</li>
+        <li id="io2" in="2">Santosh</li>
+    </ul>
+    <script>
+        let o2=document.getElementById('o1')
+        console.log(o2.tagName)
+        o2.addEventListener('click',(ev)=>{
+            let e1=ev.target
+            if(e1.tagName=='LI'){
+                console.log(e1.getAttribute('in'))
+            }
+        })
+    </script>
+</body>
+</html>

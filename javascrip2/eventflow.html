@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #c1{
+        background-color:red;
+        padding:30px;
+    }
+</style>
+<body>
+    <div id="c1">
+        <ul id="c2">
+            <li id="c3">p1</li>
+            <li id="c31">p2</li>
+            <li id="c32">p3</li>
+        </ul>
+    </div>
+<script>
+    let a1=document.getElementById('c1')
+    a1.addEventListener('click',()=>{
+        alert('c1')
+    },true)
+    let a2=document.getElementById('c3')
+    a2.addEventListener('click',()=>{
+        alert('li2')
+    },true)
+</script>
+</body>
+</html>
