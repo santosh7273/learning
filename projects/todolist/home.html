@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link href="home.css" rel="stylesheet">
+</head>
+<body>
+    <div id="mode">
+    <a href="#" id="we">Switch Mode</a>
+    </div>
+    <div class="todolist">
+    <h1>To-Do-List</h1>
+    <div class="ui">
+    <input type="text" id="usin" placeholder="Add your task">
+    <button id="addbtn" onclick="addfun()">Add</button>
+    </div>
+    <ul id="li_values">
+    </ul>
+    </div>
+    <div class="trrr">
+    <h1 id="ssss" onclick="sortTasks()">Sort</h1>
+    <h1 id="cc" onclick="updateCounter()">Know</h1>
+    </div>
+    <p id="pppp"></p>
+    <script src="home.js"></script>
+    <script>
+        var ip=document.getElementById("we");
+        ip.onclick=function(){
+            document.body.classList.toggle("mode1");
+        }
+        </script>
+</body>
+</html>

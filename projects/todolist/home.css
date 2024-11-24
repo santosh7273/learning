@@ -1,0 +1,188 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+:root{
+    --c1:cyan;
+    --c2:white;
+    --c3:black;
+}
+.mode1{
+    --c1:black;
+    --c2:black;
+    --c3:white;
+}
+body{
+    background:var(--c1);
+}
+#mode{
+    text-align: center;
+    margin-top:4vh;
+    margin-left:3vw;
+    margin-right:3vw;
+}
+#mode a{
+    text-decoration: none;
+    color:var(--c3);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:bold;
+    background:var(--c3);
+    color:var(--c2);
+    padding:1vh 1vw;
+    border-radius: 20px;
+}
+#mode a:hover{
+    letter-spacing: 2px;
+    transition:0.5s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.todolist{
+    background:white;
+    width:100%;
+    max-width:600px;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    margin-top:10vh;
+    border-radius:10px;
+    margin:50px auto 20px;
+    padding:40px 30px 70px;
+}
+.todolist h1{
+    font-size:6vmin;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align:center;
+}
+.ui{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:lightgray;
+    padding-left:20px;
+    border-radius:30px;
+    margin-bottom:30px;
+    margin-top:2vw; 
+}
+input{
+    border: none;
+    outline:none;
+    flex:1;
+    padding:2.4vmin;
+    font-weight: 3vmin;
+    background:transparent;
+}
+button{
+    border: none;
+    outline:none;
+    padding:15px 25px;
+    border-radius: 20px;
+    background-color: lightsalmon;
+    transition: 0.5s;
+    cursor:pointer;
+}
+button:hover{
+    letter-spacing: 2px;
+    transition:0.5s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+ul li{
+    list-style: none;
+    font-size:3vmin;
+    padding:12px 8px 12px 50px;
+    cursor:pointer;
+    user-select: none;
+    position: relative;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    height:28px;
+    width:28px;
+    background-image: url("unchecked.png");
+    background-size: cover;
+    top:12px;
+    left:8px;
+}
+ul li.che{
+    background-color:lightcyan;
+    text-decoration: line-through;
+}
+ul li.che::before{
+    background-image: url('tickmark.png');
+    background-size: cover;
+}
+ul li span{
+position: absolute;
+right:0;
+top:5px;
+width:40px;
+height:40px;
+font-size: 25px;
+color:black;
+line-height: 40px;
+text-align:center;
+}
+ul li span:hover{
+    background:red;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+#cc{
+    color:var(--c3);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:bold;
+    background:var(--c3);
+    color:var(--c2);
+    padding:1vh 1vw;
+    border-radius: 20px;
+    text-align: center;
+    font-size:3vmin;
+    cursor:pointer;
+    margin:auto;
+}
+.trrr{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:30%;
+    margin:auto;
+}
+#cc:hover{
+    letter-spacing: 2px;
+    transition:0.5s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+#ssss{
+    color:var(--c3);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:bold;
+    background:var(--c3);
+    color:var(--c2);
+    padding:1vh 1vw;
+    border-radius: 20px;
+    text-align: center;
+    font-size:3vmin;
+    cursor:pointer;
+    margin:auto;
+}
+#ssss:hover{
+    letter-spacing: 2px;
+    transition:0.5s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+#pppp{
+    cursor:pointer;
+    color:var(--c2);
+    border-radius: 20px;
+    background-color:var(--c3);
+    margin:auto;
+    width:30%;
+    font-size:3vmin;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:bold;
+    text-align: center;
+    margin-top:5vh;
+}

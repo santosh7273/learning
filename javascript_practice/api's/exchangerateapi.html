@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="p1">
+
+    </ul>
+    <script>
+        async function era(){
+            let o1=await fetch('https://v6.exchangerate-api.com/v6/92df7b9e6609dfc88e463f84/latest/USD')
+            console.log(o1)
+            try{
+            let o2=await o1.json()
+            let li1=o2.conversion_rates
+            for(let key in li1){
+                let u1=document.getElementById('p1')
+                let a1=document.createElement('li')
+                a1.innerHTML=`${key}:${li1[key]}`
+                u1.appendChild(a1)
+            }
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+        era()
+    </script>
+</body>
+</html>

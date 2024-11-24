@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --c1:white;
+            --c2:black;
+            --c3:red;
+        }
+        body{
+            background-color:var(--c1);
+        }
+        #a1{
+            color:var(--c1);
+            background-color: var(--c3);
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="a1">switch night</a>
+    <script>
+        let p1=document.getElementById('a1')
+        a1.addEventListener('click',()=>{
+            a1.innerHTML='Swicth to Morning';
+            document.body.classList.toggle()
+        })
+    </script>
+</body>
+</html>
